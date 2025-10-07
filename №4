@@ -1,0 +1,14 @@
+def find_top5():
+    A = list(map(int, input("Введіть елементи списку через пробіл: ").split()))
+    print("Початковий список:", A)
+
+    if len(A) < 5:
+        print("У списку менше 5 елементів!")
+        top_elements = sorted(A, reverse=True)
+    else:
+        top_elements = sorted(A, reverse=True)[:5]
+
+    print("Перші п’ять максимальних елементів:", top_elements)
+    return top_elements
+
+find_top5()
