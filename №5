@@ -1,0 +1,19 @@
+  def analyze_text():
+    text = input("Введіть текст (латинські літери): ").lower()
+    print("Текст:", text)
+
+    # Створимо множину всіх літер
+    letters = set(text)
+
+    # Множина літер, які повторюються
+    repeated = {ch for ch in letters if text.count(ch) >= 2}
+
+    # Множина літер, які зустрічаються лише один раз
+    single = {ch for ch in letters if text.count(ch) == 1}
+
+    print("Літери, що повторюються не менше двох разів:", repeated)
+    print("Літери, що зустрічаються лише один раз:", single)
+
+    return repeated, single
+
+analyze_text()
