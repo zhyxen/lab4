@@ -1,0 +1,11 @@
+n = 7
+a = [[0]*n for _ in range(n)]
+
+for i in range(n):
+    for j in range(n):
+        if j >= i:
+            a[i][j] = j - i + 1
+
+# Виведення масиву
+for row in a:
+    print(*row)
